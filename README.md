@@ -1,5 +1,4 @@
 # Description:
-Final project done as a part of CS50P course. This program contains a main function and 6 other sub program function namely instruction,start_game,user_input,wining,how many round, exit
 in instruction it shows user about the game.
 Start_game= It is program which runs the game
 user_input= it takes the input of the user and computer
