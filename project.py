@@ -11,10 +11,12 @@ def main():
             try:
                 round=0
                 rounds=int(input("How many rounds do you want to play?: "))
+                userwin=0
+                compwin=0
                 while True:
                     if round==rounds:
                         break
-                    elif round!=rounds:
+                    elif round<rounds:
                         while True:
                             user=int(input("Enter number from 1-3: "))
                             if user==1 or user==2 or user==3:
@@ -32,8 +34,14 @@ def main():
                             print ("✋")
                         if computer==3:
                             print ("✌️")
-                        print(wining(user,computer))
+                        result= wining(user,computer)
+                        print(result)
+                        if result=='user wins':
+                            userwin+=1
+                        elif result=='computer wins':
+                            compwin+=1
                         round+=1
+                print(f'user={userwin},Bot={compwin}')
             except ValueError:
                 print("Enter integer")
             continue
